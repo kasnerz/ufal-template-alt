@@ -3,7 +3,7 @@
 A customized **poster template** to be used at the Institute of Formal and Applied Linguistics, Charles University. 
 
 
-The repository contains **LaTeX** and **SVG** versions of template (the versions are not identical, but as similar as possible). The template is available only in the **portrait mode**.
+The repository contains **LaTeX and SVG** versions of template (the versions are not identical, but as similar as possible). The template is available only in the portrait mode.
 
 The template based on the [modified Better Poster template](https://github.com/ufal/UFAL_poster), which is in turn based on the original [Mike Morrison](https://twitter.com/mikemorrison)'s  Better Poster.
 
