@@ -1,0 +1,138 @@
+%%%% UFAL latex template alternative - example v1.0 (2021/02/16)
+%%%% GNU General Public License v3.0
+%%%%
+%%%% Zdeněk Kasner - UFAL
+%%%% https://github.com/kasnerz/ufal-template-alt
+%%%%
+%%%% Based on Better Poster latex template example v1.0
+%%%% Tom Kocmi - UFAL
+%%%% https://github.com/tomkocmi/betterposter-latex-template
+%%%%
+%%%% Rafael Bailo
+%%%% https://github.com/rafaelbailo/betterposter-latex-template
+%%%%
+%%%% Original design from Mike Morrison
+%%%% https://twitter.com/mikemorrison
+
+
+%%%% This template is PORTRAIT-ONLY
+\documentclass[a0paper,fleqn,noleftcolumns]{betterposter}
+
+
+\usepackage{booktabs}
+\usepackage[many]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{environ}
+\usepackage{adforn}
+\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usetikzlibrary{calc}
+
+\definecolor{bgblue}{RGB}{245,243,253}
+\definecolor{ttblue}{RGB}{91,194,224}
+
+\gdef\title{The Title of Your Amazing Paper}
+\gdef\author{Author 1 and Author 2}
+\gdef\email{\{author1,author2\}@ufal.mff.cuni.cz}
+\gdef\urlQRcode{https://ufal.mff.cuni.cz}
+\gdef\acknowledgement{Presented at ABCD, online, 22 Feb 2022. Supported by grant \#1, \#2 and \#3. \\
+The QR currently leads to the ÚFAL website, but you can generate your own by changing the parameter of the \texttt{urlQRcode} macro.}
+
+% style of the boxes
+\tcbset {
+    enhanced jigsaw,colback=white,boxsep=0.5em,boxrule=0.5pt,leftrule=1pt,rightrule=1pt,bottomrule=5pt,fonttitle=\bfseries\fontsizesection,shadow={1mm}{-1mm}{0mm}{black!30!white}
+}
+
+
+\begin{document}
+\betterposter{
+
+%%%%%%%% MAIN FINDING START
+\textbf{Main finding} goes here, translated into \\
+\textbf{plain English}. \textbf{Emphasize} the important!
+%%%%%%%% MAIN FINDING END
+}{
+%%%%%%%% CONTENT START
+
+% space between the columns of boxes
+\setlength{\columnsep}{2em}
+
+\begin{multicols}{2}
+    \begin{tcolorbox}[colframe=ufal,title=Summary]
+        \vspace{1.5em}
+
+        \begin{itemize}[label=\adfrightarrowhead,leftmargin=*,labelsep=0.5em,itemsep=1em]
+            \item Here belongs the \textbf{summary} of your work.
+            \item You can use bullet points to make the summary more readable.\\  In \LaTeX you can even use these fancy triangles.
+            \item Three bullets are just enough to fit in the box and look pretty.
+        \end{itemize}
+        \vspace{1.5em}
+      \end{tcolorbox}
+
+
+    \begin{tcolorbox}[colframe=black!65!white,title=Data \& Templates]
+    \vspace{0.8em}
+
+    \begin{itemize}[label=\adfrightarrowhead,leftmargin=*,labelsep=0.5em,itemsep=0.8em]
+        \item \textbf{Datasets}
+        \begin{itemize}
+            \item you can talk here e.g. about your data
+            \item again, using several bullet points
+            \item or you can describe the first part of your method
+        \end{itemize}
+        \item \textbf{Preprocessing}
+        \begin{itemize}
+            \item also fits here
+        \end{itemize}
+    \end{itemize}
+
+    \vspace{0.8em}
+  \end{tcolorbox}
+\end{multicols}
+
+\begin{center}
+    \vspace*{3em}
+    \includegraphics[]{img/1}
+    \vspace*{3em}
+\end{center}
+
+\begin{multicols}{2}
+    \begin{tcolorbox}[colframe=black!80!white,title=Method]
+        \vspace{2.5em}
+        \begin{itemize}[label=\adfrightarrowhead,leftmargin=*,labelsep=0.5em,itemsep=0.5em]
+            \item Here you can add the description of your \textbf{method}, some formulas etc.
+            \item This box gets resized \textbf{automatically}, so just add more text (or some \texttt{vspace}, as done here) to make it bigger.
+        \end{itemize}
+        \vspace{2.5em}
+    \end{tcolorbox}
+
+
+    \begin{tcolorbox}[colframe=ufal,title=Results \& Future Work]
+    \vspace{3.5em}
+    \begin{itemize}[label=\adfrightarrowhead,leftmargin=*,labelsep=0.5em,itemsep=1em]
+        \item \textbf{Results}
+        \begin{itemize}
+            \item Here you can add the results, future work, or anything you want to conclude with.
+        \end{itemize}
+    \end{itemize}
+    \vspace{3.5em}
+
+  \end{tcolorbox}
+\end{multicols}
+
+
+\begin{center}
+    \vspace*{3em}
+    \includegraphics{img/2}
+    \vspace*{3em}
+\end{center}
+
+%%%%%%%% CONTENT END
+}{
+%%%%%%%% BETTER POSTER RIGHT COLUMN START 
+%%%%%%%% *do not use*
+%%%%%%%% BETTER POSTER RIGHT COLUMN END 
+}
+\end{document}
